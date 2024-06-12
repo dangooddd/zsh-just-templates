@@ -1,2 +1,4 @@
 # just-templates
-useful justfile templates repository
+Useful justfile templates repository.
+
+Contains functions for fast creating of justfiles.

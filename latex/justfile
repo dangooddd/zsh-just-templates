@@ -1,0 +1,17 @@
+alias b  := build
+alias bi := build_interactive
+
+build_dir := "./latex"
+build_opt := "-pdf -interaction=nonstopmode"
+
+build:
+    latexmk \
+    -outdir={{build_dir}} \
+    {{build_opt}}
+          
+    mv -f {{build_dir}}/main.pdf main.pdf
+
+build_interactive:
+    latexmk \
+    -outdir={{build_dir}} \
+    --pdf
