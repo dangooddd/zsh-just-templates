@@ -15,3 +15,5 @@ build_interactive:
     latexmk \
     -outdir={{build_dir}} \
     --pdf
+
+    mv -f {{build_dir}}/main.pdf main.pdf
