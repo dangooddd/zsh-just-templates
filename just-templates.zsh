@@ -5,6 +5,16 @@
 function just-latex() {
     src="$JUST_TEMPLATES_DIR"/latex/justfile
     dst="$PWD"
-    [[ -d "$@" ]] && dst="$@"
-    [[ -f "$src" ]] && cp "$src" "$dst"
+
+    if ! [[ -d "@" ]]; then
+        echo "$@: incorrect directory"
+        exit 0
+    fi 
+
+    if ! [[ -f "$src" ]]; then 
+        echo "incorrect JUST_TEMPLATES_DIR value"
+        exit 0 
+    fi
+
+    cp "$src" "$dst"
 }
