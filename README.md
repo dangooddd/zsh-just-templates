@@ -4,6 +4,14 @@ Useful justfile templates repository.
 Contains functions for fast creating of justfiles.
 Basically wrapper around cp command)
 
+## Installation
+### antidote plugin manager
+Add dangooddd/just-templates in your .zsh_plugins.txt.
+Alternatively:
+```zsh
+antidote install dangooddd/just-templates
+```
+
 ## Confuguration
 For change directory that contains language/justfile directories
 to custom set JUST_TEMPLATES_DIR
