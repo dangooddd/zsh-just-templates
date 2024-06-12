@@ -1,9 +1,10 @@
 # templates for justfiles
+[[ -z $JUST_TEMPLATES_DIR ]] && JUST_TEMPLATES_DIR=${0:A:h}
 
 # latex
 function just-latex() {
-    src="${0:a:h}/latex/justfile"
+    src="$JUST_TEMPLATES_DIR"/latex/justfile
     dst="$PWD"
     [[ -d "$@" ]] && dst="$@"
-    [[ -d "$src" ]] && cp "$src" "$dst"
+    [[ -f "$src" ]] && cp "$src" "$dst"
 }
