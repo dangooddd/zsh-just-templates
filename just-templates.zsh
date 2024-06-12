@@ -21,7 +21,7 @@ function just-template() {
 
 # latex
 function just-latex() {
-    src="$JUST_TEMPLATES_DIR"/latex/
+    src="$JUST_TEMPLATES_DIR"/templates/latex/
     dst="$@"
     just-template "$src" "$dst"
 }
