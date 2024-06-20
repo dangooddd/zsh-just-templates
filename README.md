@@ -30,7 +30,14 @@ just-template template_name /destination/path
 If you want just-template function to search custom templates, set JUST_TEMPLATES_DIRS variable. 
 After this, command: 
 ```zsh
-just-templates template_name
+just-template template_name
 ```
 will search "template_name" directory in all
-directories that you specified in JUST_TEMPLATES_DIRS  
+directories that you specified in JUST_TEMPLATES_DIRS.
+
+For example, if JUST_TEMPLATES_DIRS=(~/foo), and
+foo contains bar/justfile
+```zsh
+just-template bar
+```
+will copy ~/foo/bar/justfile into your $PWD without any issue.
