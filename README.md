@@ -36,7 +36,7 @@ will search "template_name" directory in all
 directories that you specified in JUST_TEMPLATES_DIRS.
 
 For example, if JUST_TEMPLATES_DIRS=(~/foo), and
-foo contains bar/justfile
+foo contains bar/justfile, command:
 ```zsh
 just-template bar
 ```
