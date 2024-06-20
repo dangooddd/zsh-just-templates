@@ -1,8 +1,8 @@
 # just-templates
 Useful justfile templates repository.
 
-Contains functions for fast creating of justfiles.
-Basically wrapper around cp command)
+Contains function for fast creating of justfiles templates.
+Basically wrapper around cp command.
 
 ## Installation
 ### antidote plugin manager
@@ -12,16 +12,25 @@ Alternatively:
 antidote install dangooddd/just-templates
 ```
 
-## Confuguration
-For change directory that contains language/justfile directories
-to custom set JUST_TEMPLATES_DIR
-
 ## Usage
 For all templates in this repo:
 ```zsh
-just-language /destination/path
+just-"name" /destination/path
 ```
-For any other templates (function will search justfile in source path):
+Example:
 ```zsh
-just-template /source/path /destination/path
+just-latex ./
 ```
+For any other templates found in JUST_TEMPLATES_DIRS:
+```zsh
+just-template template_name /destination/path
+```
+
+## Confuguration
+If you want just-template function to search custom templates, set JUST_TEMPLATES_DIRS variable. 
+After this, command: 
+```zsh
+just-templates template_name
+```
+will search "template_name" directory in all
+directories that you specified in JUST_TEMPLATES_DIRS  
