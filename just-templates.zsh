@@ -8,15 +8,15 @@ JUST_TEMPLATES_DIRS+="${0:A:h}"/templates
 function just-template() {
     local _template_dst=$2
     # if _template_dst is empty, copy to pwd
-    [[ -z $_template_dst ]] && _template_dst=$PWD
+    [[ -z "$_template_dst" ]] && _template_dst=$PWD
     # exit if destination folder not valid
-    if ! [[ -d $_template_dst ]]; then
+    if ! [[ -d "$_template_dst" ]]; then
         echo "just-template: \"$_template_dst\" is incorrect destination folder -> pass" 1>&2
         return 1
     fi
 
     # exit if justfile already exists
-    if [[ -f $_template_dst/justfile ]]; then
+    if [[ -f "$_template_dst"/justfile ]]; then
         echo "just-template: found justfile in destination folder -> pass"
         return 0
     fi
@@ -30,7 +30,7 @@ function just-template() {
         fi
     done
     # exit if template was not found
-    if ! [[ -d $_template_src ]]; then
+    if ! [[ -d "$_template_src" ]]; then
         echo "just-template: can't find template -> pass" 1>&2
         return 1
     fi
