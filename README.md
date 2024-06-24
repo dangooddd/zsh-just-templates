@@ -1,15 +1,26 @@
-# just-templates
-Useful justfile templates repository.
+# zsh-just-templates
+Zsh plugin for managing justfile templates, also contains
+some templates.
 
 Contains function for fast creating of justfiles templates.
 Basically wrapper around cp command.
 
 ## Installation
-### antidote plugin manager
-Add dangooddd/just-templates in your .zsh_plugins.txt.
-Alternatively:
+### [antidote](https://github.com/mattmc3/antidote) plugin manager
+Add dangooddd/zsh-just-templates in your .zsh_plugins.txt.
+Manually:
 ```zsh
-antidote install dangooddd/just-templates
+antidote install dangooddd/zsh-just-templates
+```
+
+### [Oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) framework
+Clone this repo in Oh-my-zsh plugin directory:
+```zsh
+ git clone https://github.com/dangooddd/zsh-just-templates ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-just-templates
+```
+Then activate plugin in .zshrc:
+```zsh
+plugins=( ... zsh-just-templates )
 ```
 
 ## Usage
