@@ -1,0 +1,13 @@
+alias b := build
+alias r := run
+
+build_dir  := "./build"
+source_dir := "./src"
+project_name := "main"
+
+build:
+    mkdir -p {{build_dir}}
+    clang++ {{source_dir}}/main.cpp -o {{build_dir}}/{{project_name}}
+
+run:
+    {{build_dir}}/{{project_name}}

@@ -39,5 +39,6 @@ function just-template() {
     cp "$_template_src"/justfile "$_template_dst"
 }
 
-# latex alias
+# aliases
 alias just-latex="just-template latex"
+alias just-cpp="just-template cpp"
